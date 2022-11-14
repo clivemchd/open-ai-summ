@@ -23,8 +23,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/', usersRouter);
-app.use('/', csvRouter);
+app.use('/gpt/', usersRouter);
+app.use('/csv/', csvRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
