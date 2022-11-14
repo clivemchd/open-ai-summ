@@ -21,7 +21,7 @@ const getGPTResponse = async () => {
 }
 
 /* GET gpt3 response. */
-router.get('/getgptresponse', async (req, res, next) => {
+router.get('/response', async (req, res, next) => {
   const gptResponse = await getGPTResponse();
   res.status(200).append('Content-Type', 'application/json; charset=UTF-8').send({ answer: gptResponse.choices?.[0]?.text });
 });
